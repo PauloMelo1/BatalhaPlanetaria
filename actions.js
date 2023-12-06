@@ -9,3 +9,7 @@ function showActions (playerOne, playerTwo) {
 function baseConstruction () {
 
 }
+
+function attack () {
+
+}
