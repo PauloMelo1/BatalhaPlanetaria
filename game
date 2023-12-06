@@ -1,0 +1,9 @@
+let inGame = true;
+let basesUp = basesCount;
+
+while (inGame === true) {
+actions.showActions(playerOne, playerTwo);
+if (basesCount < 0) {
+inGame = false)
+}
+}
