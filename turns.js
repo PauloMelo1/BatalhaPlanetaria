@@ -1,12 +1,15 @@
 const dice = require('./diceRoller');
 let turnCount = dice
-
-function turnCheck (){
-if (turnCount % 2 === 1) {
+function turnCheck() {
+  if (turnCounter % 2 === 1) {
     playerTurn = "playerOne"
-} else {playerTurn = "playerTwo"} 
-turnCheck ++}
-
+  } else {
+    playerTurn = "playerTwo"
+  }
+  turnCounter++
+  console.log(playerTurn)
+  return playerTurn
+}
 
 /*
 metodo #2
