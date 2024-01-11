@@ -22,7 +22,7 @@ function showAction() {
   const chooseBaseCreation = prompt('Escolha sua ação [1]: Criar base militar, [2]: Criar assentamento civil ')
   if (Number(chooseBaseCreation) === 1) {
     const chooseMiliSize = prompt('Escolhe o tamanho da sua base entre 1, 3 e 5')
-    if (chooseMiliSize === 1) {
+    if (Number(chooseMiliSize) === 1) {
     const input = {}
         input.cordX = prompt('Escolha a coordenada X entre 1 e 100')
         if (input.cordX >= 1 && input.cordX <= 101) {
@@ -32,7 +32,7 @@ function showAction() {
                 input.health = 10
                 input.attack = 1
                 input.cd = 1
-                a.push(input);
+                militaryBasesP1.push(input);
             }
         }
             
@@ -47,3 +47,9 @@ function showAction() {
 function baseP1size (size) {
   prompt ('Escolha o tamanho da sua base entre 1, 3 e 5')
 }
+
+
+
+showAction()
+console.log(militaryBasesP1)
+console.log(civilBasesP1)
