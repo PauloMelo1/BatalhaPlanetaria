@@ -139,23 +139,22 @@ function showAction() {
                 input.name = "assentamento" + (civilBasesP1.length + 1)
                 input.health = 1
                 civilBasesP1.push(input);
-          }
-          if (civilPosY < 1 && civilPosY > 100) {
-              console.log("Escolha uma a posição correta!")
+          } else {
+              console.log("Escolha uma a posição correta POS Y!")
           chooseCivilPositionY()
           }
               
           }
-      }
-      }
-      chooseCivilPositionX()
-      if (chooseCivilPositionX < 1 && chooseCivilPositionX > 100) {
-          console.log("Escolha uma a posição correta!")   
+          chooseCivilPositionY()
+      } else {
+          console.log("Escolha uma a posição correta POS X!")   
           chooseCivilPositionX()
       }
       }
+      chooseCivilPositionX()
+      }
   if (Number(chooseBaseCreation) !== 2 && Number(chooseBaseCreation) !== 1 ) {
-    console.log("Escolhe a opção correta!")
+    console.log("Escolhe a opção que deseja construir corretamente!")
     showAction()
 }
 }
@@ -163,3 +162,4 @@ showAction()
 showAction()
 showAction()
 console.log(militaryBasesP1)
+console.log(civilBasesP1)
