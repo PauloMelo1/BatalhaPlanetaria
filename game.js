@@ -6,12 +6,12 @@ let inGame = true;
 
 while (inGame === true) {
   actions.showActions(playerOne, playerTwo);
-  if (militaryBasesPlayerTwoCount < 1) {
-    console.log(`Fim de jogo, o jogador 1 ${playerOne.name} venceu`)
+  if (militaryBasesP2 < 1) {
+    console.log(`Fim de jogo, o jogador 1 venceu`)
     inGame = false
   }
-  if (militaryBasesPlayerOneCount < 1) {
-    console.log(`Fim de jogo, o jogador 2 ${playerTwo.name} venceu`)
+  if (militaryBasesP1 < 1) {
+    console.log(`Fim de jogo, o jogador 2  venceu`)
     inGame = false
   }
 }
