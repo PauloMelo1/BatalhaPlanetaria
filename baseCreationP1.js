@@ -110,16 +110,16 @@ function showAction() {
         }
     if (Number(chooseMiliSize) != 5 && Number(chooseMiliSize) != 1 && Number(chooseMiliSize) != 3) {
         console.log('Digite apenas as opçoes que aparecem na tela')
+        
+  chooseMilitarySize ()
     }
-    
-        chooseMilitarySize()
   }
   chooseMilitarySize ()
   }
     if (Number(chooseBaseCreation) === 2) {
       function chooseCivilPositionX () {
           const input = {}
-      let civilPosX = prompt('Escolha entre 1 e 100 a coordenada X onde deseja construir seu ASSENTAMENTO CIVIL')
+      let civilPosX = prompt('Escolha entre 1 e 100 a coordenada X onde deseja construir seu ASSENTAMENTO CIVIL \n')
       if (civilPosX >= 1 && civilPosX <= 100) {
           function chooseCivilPositionY () {
           let civilPosY = prompt('Escolha entre 1 e 100 coordenada Y onde deseja construir seu ASSENTAMENTO CIVIL')
@@ -130,14 +130,14 @@ function showAction() {
                 input.health = 1
                 civilBasesP1.push(input);
           } else {
-              console.log("Escolha uma a posição correta POS Y!")
+              console.log("Escolha a POS Y corretamente!")
           chooseCivilPositionY()
           }
               
           }
           chooseCivilPositionY()
       } else {
-          console.log("Escolha uma a posição correta POS X!")   
+          console.log("Escolha a POS X corretamente!")   
           chooseCivilPositionX()
       }
       }
