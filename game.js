@@ -5,8 +5,7 @@ importar açoes
 let inGame = true;
 
 while (inGame === true) {
-  actions.showActions(playerOne, playerTwo);
-  if (militaryBasesP2 < 1) {
+  if (baseCreationP2.militaryBasesP2 < 1) {
     console.log(`Fim de jogo, o jogador 1 venceu`)
     inGame = false
   }
