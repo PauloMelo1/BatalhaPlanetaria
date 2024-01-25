@@ -5,7 +5,7 @@ const civilBasesP2 = []
 
 function showAction() {
   const chooseBaseCreation = prompt('Escolha sua ação [1]: Criar base militar, [2]: Criar assentamento civil ')
-  if (Number(chooseBaseCreation) === 1) {
+    if (Number(chooseBaseCreation) === 1) {
       function chooseMilitarySize () {
     const chooseMiliSize = prompt('Escolhe o tamanho da sua base entre 1, 3 e 5')
     if (Number(chooseMiliSize) === 1) {
@@ -23,22 +23,17 @@ function showAction() {
                 input.attack = 1
                 input.cd = 1
                 militaryBasesP2.push(input);
-            }
-                if (cordY1 < 1 || cordY1 > 100) {
-            console.log('Preencha corretamente')
+            } else {
+            console.log('Preencha Y corretamente')
         chooseMiliPosition1y()
         }
         }
         chooseMiliPosition1y()
-        }
-        
-        if (cordX1 < 1 || cordX1 > 100) {
+        } else {
             console.log('Preencha X corretamente')
-            chooseMiliPosition1x()
-            
+                    chooseMiliPosition1x()
+                    }
         }
-        }
-        
         chooseMiliPosition1x()
         }
     if (Number(chooseMiliSize) === 3) {
@@ -61,16 +56,13 @@ function showAction() {
                 input.cd = 3
 
                 militaryBasesP2.push(input);
-            }
-                if (cordY32 < 2 || cordY32 > 99) {
-            console.log('Preencha corretamente')
+            } else {
+            console.log('Preencha Y corretamente')
         chooseMiliPosition3y()
         }
         }
         chooseMiliPosition3y()
-        }
-        
-        if (cordX32 < 2 || cordX32 > 99) {
+        } else {
             console.log('Preencha X corretamente')
             chooseMiliPosition3x()
             
@@ -102,16 +94,13 @@ function showAction() {
                 input.cd = 5
                 
                 militaryBasesP2.push(input);
-            }
-                if (cordY53 < 3 || cordY53 > 98) {
-            console.log('Preencha corretamente')
+            } else {
+            console.log('Preencha Y corretamente')
         chooseMiliPosition5y()
         }
         }
         chooseMiliPosition5y()
-        }
-        
-        if (cordX53 < 3 || cordX53 > 98) {
+        } else {
             console.log('Preencha X corretamente')
             chooseMiliPosition5x()
             
@@ -119,17 +108,18 @@ function showAction() {
         }
         chooseMiliPosition5x()
         }
-    if (Number(chooseMiliSize) !== 5 && Number(chooseMiliSize) !==1 && Number(chooseMiliSize) !==3) {
-        ('Escolhe o corretamente o tamanho da sua base entre 1, 3 e 5')
-        chooseMilitarySize()
+    if (Number(chooseMiliSize) != 5 && Number(chooseMiliSize) != 1 && Number(chooseMiliSize) != 3) {
+        console.log('Digite apenas as opçoes que aparecem na tela')
+        
+  chooseMilitarySize ()
     }
   }
   chooseMilitarySize ()
   }
-  if (Number(chooseBaseCreation) === 2) {
+    if (Number(chooseBaseCreation) === 2) {
       function chooseCivilPositionX () {
           const input = {}
-      let civilPosX = prompt('Escolha entre 1 e 100 a coordenada X onde deseja construir seu ASSENTAMENTO CIVIL')
+      let civilPosX = prompt('Escolha entre 1 e 100 a coordenada X onde deseja construir seu ASSENTAMENTO CIVIL \n')
       if (civilPosX >= 1 && civilPosX <= 100) {
           function chooseCivilPositionY () {
           let civilPosY = prompt('Escolha entre 1 e 100 coordenada Y onde deseja construir seu ASSENTAMENTO CIVIL')
@@ -140,20 +130,20 @@ function showAction() {
                 input.health = 1
                 civilBasesP2.push(input);
           } else {
-              console.log("Escolha uma a posição correta POS Y!")
+              console.log("Escolha a POS Y corretamente!")
           chooseCivilPositionY()
           }
               
           }
           chooseCivilPositionY()
       } else {
-          console.log("Escolha uma a posição correta POS X!")   
+          console.log("Escolha a POS X corretamente!")   
           chooseCivilPositionX()
       }
       }
       chooseCivilPositionX()
       }
-  if (Number(chooseBaseCreation) !== 2 && Number(chooseBaseCreation) !== 1 ) {
+    if (Number(chooseBaseCreation) !== 2 && Number(chooseBaseCreation) !== 1 ) {
     console.log("Escolhe a opção que deseja construir corretamente!")
     showAction()
 }
