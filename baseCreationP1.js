@@ -1,10 +1,9 @@
-
-
 const militaryBasesP1 = []
 const civilBasesP1 = []
+let construPoints = 12
 
 function showAction() {
-  const chooseBaseCreation = prompt('Escolha sua ação [1]: Criar base militar, [2]: Criar assentamento civil ')
+  const chooseBaseCreation = prompt(`Você têm ${construPoints} pontos de construção disponíveis. Escolha sua ação [1]: Criar base militar, [2]: Criar assentamento civil`)
     if (Number(chooseBaseCreation) === 1) {
       function chooseMilitarySize () {
     const chooseMiliSize = prompt('Escolhe o tamanho da sua base entre 1, 3 e 5')
@@ -22,7 +21,8 @@ function showAction() {
                 input.health = 10
                 input.attack = 1
                 input.cd = 1
-                militaryBasesP1.push(input);
+                militaryBasesP1.push(input)
+                construPoints = construPoints -1
             } else {
             console.log('Preencha Y corretamente')
         chooseMiliPosition1y()
@@ -54,8 +54,8 @@ function showAction() {
                 input.health = 30
                 input.attack = 3
                 input.cd = 3
-
-                militaryBasesP1.push(input);
+                militaryBasesP1.push(input)
+                construPoints = construPoints -3
             } else {
             console.log('Preencha Y corretamente')
         chooseMiliPosition3y()
@@ -92,8 +92,8 @@ function showAction() {
                 input.health = 50
                 input.attack = 5
                 input.cd = 5
-                
-                militaryBasesP1.push(input);
+                militaryBasesP1.push(input)
+                construPoints = construPoints -5
             } else {
             console.log('Preencha Y corretamente')
         chooseMiliPosition5y()
@@ -128,7 +128,8 @@ function showAction() {
                 input.civilPosY = [civilPosY]
                 input.name = "assentamento" + (civilBasesP1.length + 1)
                 input.health = 1
-                civilBasesP1.push(input);
+                civilBasesP1.push(input)
+                construPoints = construPoints -1
           } else {
               console.log("Escolha a POS Y corretamente!")
           chooseCivilPositionY()
@@ -149,7 +150,10 @@ function showAction() {
 }
 }
 showAction()
+console.log(construPoints)
 showAction()
+console.log(construPoints)
 showAction()
+console.log(construPoints)
 console.log(militaryBasesP1)
 console.log(civilBasesP1)
