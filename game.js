@@ -9,7 +9,8 @@ function showAction1 () {
 function showAction2 () {
     console.log('p2')
 }
-
+AJUSTAR TURNO PARA TER 2 TIPOS DE TURNOS, turno de montagem e turno de combate, fazer checagem
+e alterar a variavel de tipo e valor a medida q necessario ex: if p1bases>5 && p2bases>5 {turnCount = turnCombatCount} >>> criar as novas validaçoes de turno a partir disso
 let inGame = true;
 let turnCount = 1;
 let playerTurn = "";
